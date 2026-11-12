@@ -12,6 +12,16 @@ from core.models import Provider, Stage
 
 load_dotenv()  # reads .env so API keys are available everywhere
 
+# Forward Streamlit Cloud secrets into os.environ if present
+try:
+    import streamlit as st
+
+    for k, v in st.secrets.items():
+        if isinstance(v, str) and k not in os.environ:
+            os.environ[k] = v
+except Exception:
+    pass
+
 # ---------------------------------------------------------------------------
 # Models
 # Two tiers per provider: "fast" (cheap, for high-volume steps like
