@@ -104,8 +104,8 @@ You need Python 3.12, [uv](https://docs.astral.sh/uv/), an OpenAI, Anthropic or 
 
 ```bash
 brew install uv
-git clone <this-repo-url> prospectiq
-cd prospectiq
+git clone https://github.com/sihag06/ProspectIQ-AI.git
+cd ProspectIQ-AI
 uv sync                          # creates .venv and installs dependencies
 cp .env.example .env             # then add your keys to .env
 source .venv/bin/activate
