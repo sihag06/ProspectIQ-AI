@@ -10,17 +10,26 @@ from dotenv import load_dotenv
 
 from core.models import Provider, Stage
 
-load_dotenv()  # reads .env so API keys are available everywhere
+load_dotenv()  # locally: reads .env so API keys are available everywhere
 
-# Forward Streamlit Cloud secrets into os.environ if present
-try:
-    import streamlit as st
 
-    for k, v in st.secrets.items():
-        if isinstance(v, str) and k not in os.environ:
-            os.environ[k] = v
-except Exception:
-    pass
+def _load_streamlit_secrets() -> None:
+    """
+    On Streamlit Community Cloud there is no .env file (it's never pushed to
+    GitHub). Keys live in the app's Secrets settings instead. Copy them into
+    the environment so every module reads keys the same way, wherever it runs.
+    A key already set by .env wins.
+    """
+    try:
+        import streamlit as st
+        for key, value in st.secrets.items():
+            if isinstance(value, str) and value and not os.environ.get(key):
+                os.environ[key] = value
+    except Exception:
+        pass  # no secrets configured (normal when running locally with .env)
+
+
+_load_streamlit_secrets()
 
 # ---------------------------------------------------------------------------
 # Models
