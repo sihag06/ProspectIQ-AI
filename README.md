@@ -6,7 +6,7 @@ A sales rep names a prospect. ProspectIQ researches the company, decides whether
 
 Built for the Zamp AI Solutions Analyst case study, problem statement 3 (personalised outreach).
 
-- **Live app:** _add your Streamlit Cloud link here_
+- **Live app:** [https://prospectiq-ai-tjsyeimhqcvznqmwydqxvn.streamlit.app/](https://prospectiq-ai-tjsyeimhqcvznqmwydqxvn.streamlit.app/)
 - **Demo video (5 min):** _add your Loom link here_
 
 ---
