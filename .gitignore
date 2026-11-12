@@ -1,0 +1,19 @@
+# Secrets: never commit these
+.env
+.streamlit/secrets.toml
+
+# Local data: run history and search cache
+data/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Build artefacts
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,27 @@
+# ProspectIQ theme: a research dossier.
+# Cool paper background, ink-blue for actions, and one highlighter
+# yellow reserved for evidence (used from Stage 4 onwards).
+
+[theme]
+base = "light"
+primaryColor = "#24408E"            # ink blue: buttons, focus, links
+backgroundColor = "#F6F7F9"         # cool paper
+secondaryBackgroundColor = "#EBEEF3"
+textColor = "#16202C"               # ink
+borderColor = "#D6DCE4"
+linkColor = "#24408E"
+yellowBackgroundColor = "#FFE45C"   # highlighter, for evidence quotes
+font = "'IBM Plex Sans':https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+codeFont = "'IBM Plex Mono':https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+headingFontWeights = [600, 600, 600, 500, 500, 500]
+baseRadius = "0.4rem"
+showWidgetBorder = true
+
+[theme.sidebar]
+backgroundColor = "#EBEEF3"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+runOnSave = true
